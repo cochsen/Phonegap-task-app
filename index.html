@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Task List</title>  
+  <meta name = "viewport" content = "initial-scale = 1.0, maximum-scale = 1.0, user-scalable = no, width = device-width">
+  <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jquerymobile/1.4.2/jquery.mobile.min.css" />
+  <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+  <script type="text/javascript" src="cordova.js"></script>
+  <script type="text/javascript" src="app.js"></script>
+</head>
+<body>
+<div data-role="page" id="page-main" class="ui-corner-all custom-corners">   
+  <!-- Main Page Heading -->
+  <div>
+    <h2 class="ui-bar ui-bar-a title">Task List</h2>
+  </div> 
+    <div class="ui-body ui-body-a">
+      <a href="#page-new-task" id="add-task-link" class="ui-btn ui-btn-inline ui-btn-icon-left ui-icon-plus">Add Task</a> 
+      <div class="spacer"></div>
+      <!-- Listview -->
+      <div id="task-list">
+      <!-- List Group 1 -->
+      <ul data-role="listview" data-inset="true" data-divider-theme="a">
+        <li id="sample-task-li" data-theme="a"><a href="#page-sample-task">Sample Task</a></li>  
+      </ul>
+    </div>
+    <div class="spacer"></div>
+    <div>
+      <a href="#page-task-reset" class="ui-btn ui-shadow">Reset Checked Tasks</a>
+    </div>  
+    <div class="spacer"></div>
+      <a href="#page-new-task" id="settings-link" class="ui-btn ui-btn-inline ui-btn-icon-left ui-icon-gear">Settings</a> 
+      <a href="#page-help" id="help-link" class="ui-btn ui-btn-inline ui-btn-icon-left ui-icon-info">Help</a>  
+  </div>
+</div>  
+<div data-role="page" id="page-new-task" class="ui-corner-all custom-corners">
+  <div>
+    <h2 id="title" class="ui-bar ui-bar-a title">Task List</h2>
+  </div>  
+  <div class="ui-body ui-body-a">
+    <form>
+      <label for="task-name" class="ui-hidden-accessible">Task Name:</label>
+      <input type="text" name="task-name" id="task-name" placeholder="Task Name" value="">
+      <button onclick="capturePhotoEdit();" class="ui-shadow ui-btn ui-corner-all ui-btn-inline ui-btn-icon-left ui-icon-camera">Take Photo</button>
+      <button onclick="getPhoto(pictureSource.PHOTOLIBRARY);" class="ui-shadow ui-btn ui-corner-all ui-btn-inline ui-btn-icon-left ui-icon-grid">From Gallery</button>
+    </form>  
+  </div>
+</div>     
+<!-- Group 1 Pages --> 
+<!-- Food Prep Page -->  
+<div data-role="page" id="page-sample-task" class="ui-corner-all custom-corners">
+  <div>
+    <h2 class="ui-bar ui-bar-a title">Task List</h2>
+  </div>
+  <div class="ui-body ui-body-a">
+    <img src="https://s3.amazonaws.com/FileHelper/text-file-icon.png" class="task-img" />
+  </div>
+  <div>
+    <form>
+      <fieldset data-iconpos="right">
+        <label>
+          <input type="checkbox" id="sample-task" class="check-box" value="">Sample Task
+        </label>
+      </fieldset>
+    </forms>
+   </div>   
+  <img src="" class="task-img" />
+  <a href="#main" class="ui-btn ui-shadow">Back</a>
+</div>  
+<div data-role="page">
+</div>  
+<div data-role="page" id="page-task-reset" class="ui-corner-all custom-corners">
+  <h2 class="ui-bar ui-bar-a">Task List</h2>  
+  <a href="#main" id="reset-button" class="ui-btn ui-shadow">Reset Tasks</a>
+</div>     
+<div data-role="page" id="page-help" class="ui-corner-all custom-corners">
+  <h2 id="title" class="ui-bar ui-bar-a">Task List</h2>
+</div>     
+</body>
+</html>
