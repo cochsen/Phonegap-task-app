@@ -1,0 +1,22 @@
+.title {
+  text-align: center;
+}
+
+.task-img {
+  max-width: 60%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#settings-link {
+  float: right;
+}
+
+#help-link {
+  float: right;
+}
+
+.spacer {
+  height: 20px;
+}
