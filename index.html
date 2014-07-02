@@ -48,6 +48,8 @@
       <button onclick="capturePhotoEdit();" class="ui-shadow ui-btn ui-corner-all ui-btn-inline ui-btn-icon-left ui-icon-camera">Take Photo</button>
       <button onclick="getPhoto(pictureSource.PHOTOLIBRARY);" class="ui-shadow ui-btn ui-corner-all ui-btn-inline ui-btn-icon-left ui-icon-grid">From Gallery</button>
     </form>  
+    <img src="" class="selected-img" /> 
+    <a href="#page-main" id="add-task-btn" class="ui-shadow ui-btn ui-corner-all ui-btn-icon-left ui-icon-check">Done</a>
   </div>
 </div>     
 <!-- Group 1 Pages --> 
@@ -57,19 +59,16 @@
     <h2 class="ui-bar ui-bar-a title">Task List</h2>
   </div>
   <div class="ui-body ui-body-a">
-    <img src="https://s3.amazonaws.com/FileHelper/text-file-icon.png" id="smallImage" class="task-img" />
-  </div>
-  <div>
-    <form>
-      <fieldset data-iconpos="right">
-        <label>
-          <input type="checkbox" id="sample-task" class="check-box" value="">Sample Task
-        </label>
-      </fieldset>
-    </forms>
-   </div>   
-  <img src="" class="task-img" />
-  <a href="#main" class="ui-btn ui-shadow">Back</a>
+  <form>
+    <fieldset data-iconpos="right">
+      <label>
+        <input type="checkbox" id="sample-task" class="check-box" value="">Sample Task
+      </label>
+    </fieldset>
+    <img src="https://s3.amazonaws.com/FileHelper/text-file-icon.png" class="task-img" />
+  </form>
+  <a href="#page-main" class="ui-btn ui-shadow">Back</a>  
+  </div>   
 </div>  
 <div data-role="page">
 </div>  
@@ -79,6 +78,6 @@
 </div>     
 <div data-role="page" id="page-help" class="ui-corner-all custom-corners">
   <h2 id="title" class="ui-bar ui-bar-a">Task List</h2>
-</div>     
+</div>    
 </body>
 </html>
