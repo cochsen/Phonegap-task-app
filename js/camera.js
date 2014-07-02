@@ -40,16 +40,16 @@ var destinationType; // sets the format of returned value
 
       // Get image handle
       //
-      var largeImage = document.getElementById('largeImage');
+      var smallImage = document.getElementById('smallImage');
 
       // Unhide image elements
       //
-      largeImage.style.display = 'block';
+      smallImage.style.display = 'block';
 
       // Show the captured photo
       // The in-line CSS rules are used to resize the image
       //
-      largeImage.src = imageURI;
+      smallImage.src = imageURI;
     }
 
     // A button will call this function
