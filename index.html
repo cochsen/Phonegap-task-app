@@ -25,7 +25,7 @@
       <div id="task-list">
       <!-- List Group 1 -->
       <ul data-role="listview" data-inset="true" data-divider-theme="a">
-        <li id="sample-task-li" data-theme="a"><a href="#page-sample-task">Sample Task</a></li>  
+        <li id="sample-task-li" class="task-link" data-theme="a"><a href="#page-task">Sample Task</a></li>  
       </ul>
     </div>
     <div class="spacer"></div>
@@ -48,17 +48,15 @@
       <button onclick="capturePhotoEdit();" class="ui-shadow ui-btn ui-corner-all ui-btn-inline ui-btn-icon-left ui-icon-camera">Take Photo</button>
       <button onclick="getPhoto(pictureSource.PHOTOLIBRARY);" class="ui-shadow ui-btn ui-corner-all ui-btn-inline ui-btn-icon-left ui-icon-grid">From Gallery</button>
     </form>  
-    <img style="display:none; width:60px; height:60px;" id="smallImage" src="" /> // class="selected-img"
+    <img src="" class="selected-img" /> 
     <a href="#page-main" id="add-task-btn" class="ui-shadow ui-btn ui-corner-all ui-btn-icon-left ui-icon-check">Done</a>
   </div>
-</div>     
-<!-- Group 1 Pages --> 
-<!-- Food Prep Page -->  
-<div data-role="page" id="page-sample-task" class="ui-corner-all custom-corners">
+</div>       
+<div data-role="page" id="page-task"> 
   <div>
     <h2 class="ui-bar ui-bar-a title">Task List</h2>
   </div>
-  <div class="ui-body ui-body-a">
+    <div class="ui-body ui-body-a">
   <form>
     <fieldset data-iconpos="right">
       <label>
@@ -67,17 +65,16 @@
     </fieldset>
     <img src="https://s3.amazonaws.com/FileHelper/text-file-icon.png" class="task-img" />
   </form>
+  <div id="task-content" class="ui-body ui-body-a">
+  </div>
   <a href="#page-main" class="ui-btn ui-shadow">Back</a>  
-  </div>   
-</div>  
-<div data-role="page">
-</div>  
+</div>   
 <div data-role="page" id="page-task-reset" class="ui-corner-all custom-corners">
   <h2 class="ui-bar ui-bar-a">Task List</h2>  
   <a href="#main" id="reset-button" class="ui-btn ui-shadow">Reset Tasks</a>
 </div>     
 <div data-role="page" id="page-help" class="ui-corner-all custom-corners">
   <h2 id="title" class="ui-bar ui-bar-a">Task List</h2>
-</div>    
+</div>  
 </body>
 </html>
