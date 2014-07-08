@@ -56,25 +56,27 @@
   <div>
     <h2 class="ui-bar ui-bar-a title">Task List</h2>
   </div>
-    <div class="ui-body ui-body-a">
+  <div id="task-content" class="ui-body ui-body-a">
+    <!-- <div class="add-step-btn-div"> -->
+    <a href="#page-add-step" id="add-step-btn" class="ui-btn ui-btn-inline ui-btn-icon-left ui-icon-plus">Add Step</a> 
+    <!-- </div> -->
   <form>
+    <img src="https://s3.amazonaws.com/FileHelper/text-file-icon.png" class="task-img" />
     <fieldset data-iconpos="right">
       <label>
         <input type="checkbox" id="sample-task" class="check-box" value="">Sample Task
       </label>
-    </fieldset>
-    <img src="https://s3.amazonaws.com/FileHelper/text-file-icon.png" class="task-img" />
+    </fieldset>    
   </form>
-  <div id="task-content" class="ui-body ui-body-a">
-  </div>
   <a href="#page-main" class="ui-btn ui-shadow">Back</a>  
 </div>   
 <div data-role="page" id="page-task-reset" class="ui-corner-all custom-corners">
   <h2 class="ui-bar ui-bar-a">Task List</h2>  
-  <a href="#main" id="reset-button" class="ui-btn ui-shadow">Reset Tasks</a>
+  <a href="#page-main" id="reset-button" class="ui-btn ui-shadow">Reset Tasks</a>
 </div>     
-<div data-role="page" id="page-help" class="ui-corner-all custom-corners">
-  <h2 id="title" class="ui-bar ui-bar-a">Task List</h2>
+<div data-role="page" id="page-add-step" class="ui-corner-all custom-corners">
+  <h2 class="ui-bar ui-bar-a">Task List</h2>
+  <p>Content</p>
 </div>  
 </body>
 </html>
