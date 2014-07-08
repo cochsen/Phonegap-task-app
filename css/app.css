@@ -1,12 +1,25 @@
 .title {
   text-align: center;
 }
+#add-task-link {
+}
 
 .task-img {
   max-width: 60%;
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+.selected-img {
+  max-width: 30%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.add-step-btn-div {
+  //float: right;
 }
 
 #settings-link {
