@@ -25,7 +25,8 @@
       <div id="task-list">
       <!-- List Group 1 -->
       <ul data-role="listview" data-inset="true" data-divider-theme="a">
-        <li id="sample-task-li" class="task-link" data-theme="a"><a href="#page-task">Sample Task</a></li>  
+        <li id="sample-task-li" class="task-link" data-theme="a"><a href="#page-task" data-transition="slide">
+          <img src="https://s3.amazonaws.com/FileHelper/text-file-icon.png" class="task-img" />Sample Task</a></li>  
       </ul>
     </div>
     <div class="spacer"></div>
@@ -68,15 +69,27 @@
       </label>
     </fieldset>    
   </form>
-  <a href="#page-main" class="ui-btn ui-shadow">Back</a>  
+  <a href="#page-main" class="ui-btn ui-shadow ui-icon-arrow-l ui-btn-icon-left" data-transition="slide" data-direction="reverse">Back</a>  
+  </div>
 </div>   
 <div data-role="page" id="page-task-reset" class="ui-corner-all custom-corners">
-  <h2 class="ui-bar ui-bar-a">Task List</h2>  
+  <h2 class="ui-bar ui-bar-a title">Task List</h2> 
+  <div id="task-content" class="ui-body ui-body-a">
   <a href="#page-main" id="reset-button" class="ui-btn ui-shadow">Reset Tasks</a>
+  </div>
 </div>     
 <div data-role="page" id="page-add-step" class="ui-corner-all custom-corners">
-  <h2 class="ui-bar ui-bar-a">Task List</h2>
-  <p>Content</p>
+  <h2 class="ui-bar ui-bar-a title">Task List</h2>
+  <div class="ui-body ui-body-a">
+    <form>
+      <label for="step-name" class="ui-hidden-accessible">Step Name:</label>
+      <input type="text" name="step-name" id="step-name" placeholder="Step Name" value="">
+      <button onclick="capturePhotoEdit();" class="ui-shadow ui-btn ui-corner-all ui-btn-inline ui-btn-icon-left ui-icon-camera">Take Photo</button>
+      <button onclick="getPhoto(pictureSource.PHOTOLIBRARY);" class="ui-shadow ui-btn ui-corner-all ui-btn-inline ui-btn-icon-left ui-icon-grid">From Gallery</button>
+    </form>  
+    <img src="" class="selected-img" /> 
+    <a href="#page-main" id="add-step-btn" class="ui-shadow ui-btn ui-corner-all ui-btn-icon-left ui-icon-check">Done</a>
+  </div>  
 </div>  
 </body>
 </html>
