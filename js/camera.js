@@ -1,5 +1,6 @@
 var pictureSource;   // picture source
 var destinationType; // sets the format of returned value
+var counter = 0;
 
     // Wait for device API libraries to load
     //
@@ -20,7 +21,7 @@ var destinationType; // sets the format of returned value
 
       // Get image handle
       //
-      var smallImage = document.getElementById('smallImage');
+      var smallImage = document.getElementById('task-' + counter + '-img');
 
       // Unhide image elements
       //
@@ -30,6 +31,7 @@ var destinationType; // sets the format of returned value
       // The in-line CSS rules are used to resize the image
       //
       smallImage.src = "data:image/jpeg;base64," + imageData;
+      counter++;
     }
 
     // Called when a photo is successfully retrieved
