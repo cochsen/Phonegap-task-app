@@ -34,7 +34,7 @@ $(document).ready(function() {
                                     '</ul>' +
                                   '</div>' +
                                   '<form>' + 
-                                    '<!-- <img src="https://s3.amazonaws.com/FileHelper/text-file-icon.png" class="task-img" /> -->'  + 
+                                    '<img src="" id="smallImage" class="task-img" />  + 
                                     '<fieldset data-iconpos="right">' + 
                                       '<label>' + 
                                         '<input type="checkbox" id="task-' + i + '-checkbox" class="check-box" value="">' + tasks[i].name + 
