@@ -34,7 +34,7 @@ $(document).ready(function() {
                                     '</ul>' +
                                   '</div>' +
                                   '<form>' + 
-                                    '<img src="" id="task-' + i + '-img" class="task-img" />'  + 
+                                    '<img src="' + pictureArray[i] + '" id="task-' + i + '-img" class="task-img" />'  + 
                                     '<fieldset data-iconpos="right">' + 
                                       '<label>' + 
                                         '<input type="checkbox" id="task-' + i + '-checkbox" class="check-box" value="">' + tasks[i].name + 
