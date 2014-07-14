@@ -31,7 +31,6 @@ var pictureArray = [];
       // Show the captured photo
       // The in-line CSS rules are used to resize the image
       //
-      image = "data:image/jpeg;base64," + imageData;
       var image = "data:image/jpeg;base64," + imageData;
       pictureArray.push(image);
       counter++;
