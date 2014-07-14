@@ -72,7 +72,8 @@ var destinationType; // sets the format of returned value
     function getPhoto(source) {
       // Retrieve image file location from specified source
       navigator.camera.getPicture(onPhotoDataSuccess, onFail, { quality: 40,
-        destinationType: destinationType.DATA_URL });
+        destinationType: destinationType.DATA_URL,
+        sourceType: source });
     }
 
     // Called if something bad happens.
