@@ -1,6 +1,7 @@
 var pictureSource;   // picture source
 var destinationType; // sets the format of returned value
 var counter = 0;
+var pictureArray = [];
 
     // Wait for device API libraries to load
     //
@@ -21,16 +22,18 @@ var counter = 0;
 
       // Get image handle
       //
-      var smallImage = document.getElementById('task-' + counter + '-img');
+      //var smallImage = document.getElementById('task-' + counter + '-img');
 
       // Unhide image elements
       //
-      smallImage.style.display = 'block';
+      //smallImage.style.display = 'block';
 
       // Show the captured photo
       // The in-line CSS rules are used to resize the image
       //
-      smallImage.src = "data:image/jpeg;base64," + imageData;
+      image = "data:image/jpeg;base64," + imageData;
+      var image = "data:image/jpeg;base64," + imageData;
+      pictureArray.push(image);
       counter++;
     }
 
