@@ -34,7 +34,7 @@ $(document).ready(function() {
                                     '</ul>' +
                                   '</div>' +
                                   '<form>' + 
-                                    '<img src="' + pictureArray[i] + '" id="task-' + i + '-img" class="task-img" />'  + 
+                                    '<!-- <img src="https://s3.amazonaws.com/FileHelper/text-file-icon.png" class="task-img" /> -->'  + 
                                     '<fieldset data-iconpos="right">' + 
                                       '<label>' + 
                                         '<input type="checkbox" id="task-' + i + '-checkbox" class="check-box" value="">' + tasks[i].name + 
@@ -73,7 +73,16 @@ $(document).ready(function() {
     console.log(tasks[current_task]);
     $(current_id).empty();
     for (var i = 0; i < tasks[current_task].steps.length; i++) {
-    $(current_id).append('<li id="task-' + current_task + '-step-' + i + '" data-theme="a"><a href="#" >' + tasks[current_task].steps[i][1] + '</a></li>');
+    $(current_id).append('<li id="task-' + current_task + '-step-' + i + '" data-theme="a"><a href="#page-step-' + i + '"  data-transition="slide">' + tasks[current_task].steps[i][1] + '</a></li>');
+    $(document.body).append('<div data-role="page" id="page-step-' + i + '">' + 
+                                '<div>' + 
+                                  '<h2 class="ui-bar ui-bar-a title">Task List</h2>' +
+                                '</div>' + 
+                                '<div class="task-content ui-body ui-body-a">' + 
+                            '<p>Step ' + i + '</p>' +
+                            '<a href="#page-' + i + '" class="ui-btn ui-shadow ui-icon-arrow-l ui-btn-icon-left" data-transition="slide" data-direction="reverse">Back</a>' +
+                            '</div>' +
+                            '</div>');      
     }
     $(current_id).listview("refresh");
   });
